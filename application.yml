@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: configServer
+  profiles:
+    active: native
+    #active: git(when use git repo)
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config
+         #search-locations: "file:///Users//test//config" (store using file system)
+         #git:
+         #uri: "https://github.com/githubbsr007/config-data.git"
+         #default-label: main (branch name)
+         #timeout: 5 (5 second)
+         #clone-on-start: true
+         #force-pull: true
+
+server:
+  port: 7070
